@@ -106,13 +106,13 @@ H1 <- 'abs(PCC) > abs(CA) > abs(M)'  # eigen hypothese
 Hypo_studies <- list(H1 = H1)
 #
 # Evidence synthesis
-out2 <- evSyn(object = Param_studies, VCOV = CovMx_studies, 
+GES_All <- evSyn(object = Param_studies, VCOV = CovMx_studies, 
               hypothesis = Hypo_studies,
               type = "added", 
               comparison = "complement") 
 
-out2
-out2$Cumulative.GORICA.weights
-out2$Final.ratio.GORICA.weights
+GES_All
+GES_All$Cumulative.GORICA.weights
+GES_All$Final.ratio.GORICA.weights
 
-out2$GORICA.weight_m[,1]/out2$GORICA.weight_m[,2]
+GES_All$GORICA.weight_m[,1]/out2$GORICA.weight_m[,2]
